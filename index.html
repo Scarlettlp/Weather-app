@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework5</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <form id="search-form">
+          <input
+            type="text"
+            id="enter-city"
+            placeholder="Enter a city"
+            size="15px"
+          />
+          <button type="submit" id="search" class="btn btn-light">
+            Search
+          </button>
+          <button type="button" id="current" class="btn btn-light">
+            Current
+          </button>
+        </form>
+        <p></p>
+
+        <h1 id="date">Sunday 15:24</h1>
+
+        <div class="row">
+          <div class="col-3">
+            <span class="firstemoji"> ☀ </span>
+            <div class="temperature">
+              <span id="temp">22</span>
+              <a href="#" id="celsius">°C</a> |
+              <a href="#" id="fahrenheit">°F</a>
+            </div>
+          </div>
+          <div class="col-3">
+            <ul>
+              <li>Precipitation: 56%</li>
+              <li>Wind: <span id="wind"> 21</span> km/h</li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <span class="sky" id="description">Clear</span>
+          </div>
+          <h3 id="city">San Francisco, California, EU.</h3>
+        </div>
+        <br />
+
+        <div class="row">
+          <div class="col">
+            Mon
+            <div class="row">
+              <div class="col">
+                <span class="secondemoji">☀ </span>
+                <br />
+                23°c
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            Tue
+            <div class="row">
+              <div class="col">
+                <span class="thirdemoji">☀ </span>
+                <br />
+                24°c
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            Wed
+            <div class="row">
+              <div class="col">
+                <span class="fourthemoji">☀ </span>
+                <br />
+                21°c
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            Thu
+            <div class="row">
+              <div class="col">
+                <span class="fifthemoji">🌧</span>
+                <br />
+                19°c
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            Fri
+            <div class="row">
+              <div class="col">
+                <span class="sixthemoji">🌧</span>
+                <br />
+                17°c
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
