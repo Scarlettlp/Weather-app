@@ -45,3 +45,8 @@ ul {
   list-style: none;
   color: gray;
 }
+.link {
+  font-size: small;
+  padding: 15px;
+  margin: 30px;
+}
