@@ -2,6 +2,21 @@ form {
   margin-left: auto;
   padding: 10px;
 }
+
+h1 {
+  font-size: 25px;
+}
+ul {
+  list-style: none;
+  color: gray;
+}
+span.sky {
+  color: gray;
+}
+#temp {
+  font-size: 20px;
+  float: left;
+}
 .content {
   margin-left: 15px;
 }
@@ -10,16 +25,15 @@ form {
   margin-left: 10px;
 }
 
-.weather-app {
-  border: 1px solid;
-  padding: 15px;
+.weather-app-wrapper {
   margin: 20px;
   max-width: 900px;
-  border-radius: 20px;
 }
-
-span.sky {
-  color: gray;
+.weather-app {
+  border: 1px solid;
+  border-color: #bdbdbd;
+  padding: 15px;
+  border-radius: 20px;
 }
 
 .firstemoji {
@@ -40,13 +54,4 @@ span.sky {
 }
 .sixthemoji {
   font-size: 30px;
-}
-ul {
-  list-style: none;
-  color: gray;
-}
-.link {
-  font-size: small;
-  padding: 15px;
-  margin: 30px;
 }
