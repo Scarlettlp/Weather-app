@@ -20,11 +20,11 @@
         <div class="weather-app">
           <form id="search-form">
             <input
-              type="text"
+              type="search"
               id="enter-city"
               placeholder="Enter a city"
-              size="15px"
-            />
+              size="25px"
+                        />
             <button type="submit" id="search" class="btn btn-light">
               Search
             </button>
@@ -36,18 +36,18 @@
           <h1 id="date">Sunday 15:24</h1>
 
           <div class="row">
-            <div class="col-3">
-              <div class= "clearfix">
+            <div class="col-6">
+              <div class= "clearfix weather-temp">
                 <img src="http://openweathermap.org/img/wn/10d@2x.png" id="icon" class="float-left"/>
-      <!-- <span class="firstemoji" id="icon"> ☀ </span> -->
+      
               <div class="temperature">
-                <span id="temp">22 </span>
-                &nbsp;°C  |
-                <a href="#" id="fahrenheit">°F</a>
+                <span id="temp">22</span>
+                &nbsp; <a href="#" id="celsius-link" class= "active"> °C </a>|
+                <a href="#" id="fahrenheit-link">°F</a>
                 </div>
               </div>
             </div>
-            <div class="col-3">
+            <div class="col-6">
               <ul>
                 <li>Humidity: <span id= "humidity"> 30</span>%</li>
                 <li>Wind: <span id="wind"> 21</span> km/h</li>

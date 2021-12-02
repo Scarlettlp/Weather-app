@@ -26,6 +26,7 @@ let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 
 function showTemperature(response) {
+  celsiusTemperature = response.data.main.temp;
   document.querySelector("#temp").innerHTML = Math.round(
     response.data.main.temp
   );
@@ -77,3 +78,30 @@ function searchCity(event) {
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchCity);
+
+function showFahrenheitTemp(event) {
+  event.preventDefault();
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let showTemperature = document.querySelector("#temp");
+  let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
+  showTemperature.innerHTML = Math.round(fahrenheitTemp);
+}
+
+function showCelsiusTemp(event) {
+  event.preventDefault();
+  fahrenheitLink.classList.add("active");
+  celsiusLink.classList.remove("active");
+  let showTemperature = document.querySelector("#temp");
+  showTemperature.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheitTemp);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsiusTemp);
+
+search("San Francisco");
