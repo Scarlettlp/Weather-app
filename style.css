@@ -1,3 +1,8 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #e5ebef;
+}
+
 form {
   margin-left: auto;
   padding: 10px;
@@ -17,6 +22,7 @@ span.sky {
   font-size: 20px;
   float: left;
 }
+
 .content {
   margin-left: 15px;
 }
@@ -26,32 +32,17 @@ span.sky {
 }
 
 .weather-app-wrapper {
-  margin: 20px;
-  max-width: 900px;
+  margin: 0 auto;
+  max-width: 600px;
 }
 .weather-app {
   border: 1px solid;
   border-color: #bdbdbd;
   padding: 15px;
   border-radius: 20px;
-}
-
-.firstemoji {
-  font-size: 40px;
-}
-.secondemoji {
-  font-size: 30px;
-}
-.thirdemoji {
-  font-size: 30px;
-}
-
-.fourthemoji {
-  font-size: 30px;
-}
-.fifthemoji {
-  font-size: 30px;
-}
-.sixthemoji {
-  font-size: 30px;
+  background: radial-gradient(
+    circle at 12.8% 28%,
+    rgb(206, 155, 243) 0%,
+    rgb(142, 229, 247) 90%
+  );
 }

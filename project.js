@@ -12,7 +12,7 @@ function formatDate(date) {
     "Sunday",
     "Monday",
     "Tuesday",
-    "Wednsday",
+    "Wednesday",
     "Thursday",
     "Friday",
     "Saturday",
@@ -36,8 +36,9 @@ function showTemperature(response) {
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
-  document.querySelector("#icon").setAttribute =
-    ("src", `http://openweathermap.org/img/wn/01d@2x.png`);
+  document.querySelector(
+    "#icon"
+  ).src = `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`;
 }
 
 function search(city) {
