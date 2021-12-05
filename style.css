@@ -54,3 +54,7 @@ span.sky {
 .temperature .active:hover {
   text-decoration: none;
 }
+
+.float-left {
+  float: left;
+}

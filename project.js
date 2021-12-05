@@ -90,8 +90,8 @@ function showFahrenheitTemp(event) {
 
 function showCelsiusTemp(event) {
   event.preventDefault();
-  fahrenheitLink.classList.add("active");
-  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
   let showTemperature = document.querySelector("#temp");
   showTemperature.innerHTML = Math.round(celsiusTemperature);
 }
