@@ -18,6 +18,9 @@ ul {
 span.sky {
   color: gray;
 }
+input {
+  height: 38px;
+}
 #temp {
   font-size: 30px;
   float: left;
@@ -57,4 +60,15 @@ span.sky {
 
 .float-left {
   float: left;
+}
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.weather-forecast-min {
+  opacity: 0.6;
+}
+.weather-forecast-date {
+  font-size: 16px;
 }

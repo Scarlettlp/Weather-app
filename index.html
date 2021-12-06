@@ -24,7 +24,7 @@
               id="enter-city"
               placeholder="Enter a city"
               size="25px"
-                        />
+            />
             <button type="submit" id="search" class="btn btn-light">
               Search
             </button>
@@ -37,19 +37,23 @@
 
           <div class="row">
             <div class="col-6">
-              <div class= "clearfix weather-temp">
-                <img src="http://openweathermap.org/img/wn/10d@2x.png" id="icon" class="float-left"/>
-      
-              <div class="temperature">
-                <span id="temp">22</span>
-                &nbsp; <a href="#" id="celsius-link" class= "active"> °C </a>|
-                <a href="#" id="fahrenheit-link">°F</a>
+              <div class="clearfix weather-temp">
+                <img
+                  src="http://openweathermap.org/img/wn/10d@2x.png"
+                  id="icon"
+                  class="float-left"
+                />
+
+                <div class="temperature">
+                  <span id="temp">22</span>
+                  &nbsp; <a href="#" id="celsius-link" class="active"> °C </a>|
+                  <a href="#" id="fahrenheit-link">°F</a>
                 </div>
               </div>
             </div>
             <div class="col-6">
               <ul>
-                <li>Humidity: <span id= "humidity"> 30</span>%</li>
+                <li>Humidity: <span id="humidity"> 30</span>%</li>
                 <li>Wind: <span id="wind"> 21</span> km/h</li>
               </ul>
             </div>
@@ -61,63 +65,15 @@
             <h2 id="city">San Francisco, California, EU.</h2>
           </div>
           <br />
-
-          <div class="row">
-            <div class="col">
-              Mon
-              <div class="row">
-                <div class="col">
-                  <span class="secondemoji">☀ </span>
-                  <br />
-                  23°c
-                </div>
-              </div>
-            </div>
-
-            <div class="col">
-              Tue
-              <div class="row">
-                <div class="col">
-                  <span class="thirdemoji">☀ </span>
-                  <br />
-                  24°c
-                </div>
-              </div>
-            </div>
-
-            <div class="col">
-              Wed
-              <div class="row">
-                <div class="col">
-                  <span class="fourthemoji">☀ </span>
-                  <br />
-                  21°c
-                </div>
-              </div>
-            </div>
-
-            <div class="col">
-              Thu
-              <div class="row">
-                <div class="col">
-                  <span class="fifthemoji">🌧</span>
-                  <br />
-                  19°c
-                </div>
-              </div>
-            </div>
-
-            <div class="col">
-              Fri
-              <div class="row">
-                <div class="col">
-                  <span class="sixthemoji">🌧</span>
-                  <br />
-                  17°c
-                </div>
-              </div>
-            </div>
-            </div>
+          <div class="weather-forecast" id="forecast"></div>
+        </div>
+        <small>
+          <a href="https://github.com/Scarlettlp/Weather-app" target="_blank"
+            >Open-source code</a
+          >
+          by Scarlett Lara
+        </small>
+      </div>
     </div>
      <small>
             <a href="https://github.com/Scarlettlp/Weather-app" target="_blank"
