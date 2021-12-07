@@ -1,6 +1,9 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #e5ebef;
+  background-image: url(img/sky.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-color: #e5ebef; */
 }
 
 form {
@@ -48,6 +51,7 @@ input {
     rgb(206, 155, 243) 0%,
     rgb(142, 229, 247) 90%
   );
+  opacity: 0.8;
 }
 .temperature .active {
   color: black;
@@ -66,7 +70,7 @@ input {
   text-align: center;
 }
 
-.weather-forecast-min {
+.weather-forecast-temperature-min {
   opacity: 0.6;
 }
 .weather-forecast-date {

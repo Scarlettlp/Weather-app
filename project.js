@@ -21,32 +21,31 @@ function formatDate(date) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
-  
-  let days = ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+
   let forecastHTML = `<div class= "row">`;
-  days.forEach(function (day) {
+  days.forEach(function (forecastDay) {
     forecastHTML =
       forecastHTML +
       `
      <div class= "col-2">
-      <div class = "weather-forecast-date">${day}</div>
+      <div class = "weather-forecast-date">${forecastDay.dt}</div>
        <img
-        src="http://openweathermap.org/img/wn/10d@2x.png"
+        src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
         alt= ""
-        width="42" />
+        width="42"/>
         <div class = "weather-forecast-temperatures">
           <span class= "weather-forecast-temperature-max">
-            10°
-          </span>
+            ${forecastDay.temp.max}°
+          </span> 
            <span class= "weather-forecast-temperature-min">
-            8°
+            ${forecastDay.temp.min}°
           </span>
         </div>
         </div>
-        </div>
-        `;
+         `;
   });
 
   forecastHTML = forecastHTML + `</div>`;
@@ -56,6 +55,14 @@ function displayForecast() {
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
+
+function getforecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "c2a98dac7a66049f64b0810dd03180a2";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&unit=metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
+}
 
 function showTemperature(response) {
   celsiusTemperature = response.data.main.temp;
@@ -72,6 +79,8 @@ function showTemperature(response) {
   document.querySelector(
     "#icon"
   ).src = `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`;
+
+  getforecast(response.data.coord);
 }
 
 function search(city) {
@@ -137,4 +146,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemp);
 
 search("San Francisco");
-displayForecast();
