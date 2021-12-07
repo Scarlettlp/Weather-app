@@ -52,6 +52,7 @@ input {
     rgb(142, 229, 247) 90%
   );
   opacity: 0.8;
+  display: block;
 }
 .temperature .active {
   color: black;
