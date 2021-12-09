@@ -3,6 +3,7 @@ body {
   background-image: url(img/sky.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  min-height: 100vh;
   /* background-color: #e5ebef; */
 }
 
@@ -34,7 +35,6 @@ input {
 }
 .container {
   margin-top: 40px;
-  margin-left: 10px;
 }
 
 .weather-app-wrapper {
